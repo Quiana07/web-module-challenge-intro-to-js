@@ -157,7 +157,7 @@ if (age <1){
   // feeding condition for puppies
   if (age <=.33){
     return weight * .10
-  }else if (age <.583){
+  }else if (age <=.583){
     return weight * .05
   } else {
     return weight * .04
@@ -228,13 +228,15 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-let computer = Math.random();
+let computer = Math.random()
+console.log('computer', computer)
+
 
 if(computer <=.25){
   computer = 'rock';
 }else if (computer <= .40){
   computer = 'paper'
-}else if (computer >.40){
+}else {
   computer = 'scissors'
 }
 
@@ -250,10 +252,12 @@ function game(user, computer){
     return `you lose!`;
   }else if (user === 'scissors' && computer === 'paper'){
     return `you win!`
-  }else if (user === 'paper' && computer === 'Scissors'){
+  }else if (user === 'paper' && computer === 'scissors'){
     return `you lose!`
   }else if (user === 'scissors' && computer === 'rock'){
     return `you lose!`
+  }else if (user === 'paper' && computer === 'rock'){
+     return `you win!`
   }else{
     return `you lose!`
   }
@@ -351,6 +355,8 @@ if (gradeScore >= 90){
   return `you got an F`;
 }
 }
+
+
 
 console.log('t7', grade (73));
 
